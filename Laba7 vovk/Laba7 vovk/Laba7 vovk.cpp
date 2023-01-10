@@ -2,10 +2,25 @@
 //
 
 #include <iostream>
+using namespace std;
+
+int Sum(int i, int A[], int n);
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+int A[] = { 5,4,2,-3,8 };
+int n = 5;
+int sum;
+sum = Sum(0, A, n);
+cout << sum;
+}
+int Sum(int i, int A[], int n)
+{
+    if (i == n - 1)
+        return A[i];
+    else
+        return A[i] + Sum(i + 1, A, n);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
